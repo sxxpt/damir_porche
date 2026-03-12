@@ -176,7 +176,7 @@ input::placeholder {
 
 @media(max-width: 768px) {
     h1 {
-        font-size: 100px;
+        font-size: 70px;
     }
 
     .btn {
