@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Montserrat;
+    outline: none;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.header {
+    background: #141414;
+    padding: 10px 0;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 80px;
+}
+
+.header__nav-list a {
+    color: #F0F0F0;
+    font-weight: 500;
+}
+
+.main {
+    background: #141414;
+}
+
+.banner {
+    height: 100vh;
+    background-image: url(images/banner.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 11px;
+    background-position: center;
+}
+
+h1 {
+    font-size: 140px;
+    font-weight: 600;
+    color: #B31D1E;
+}
+
+.btn {
+    font-weight: 800;
+    font-size: 24px;
+    color: #141414;
+    padding: 18px 94px;
+    background: linear-gradient(93.34deg, #FFA600 0%, #E41818 100%);
+    border-radius: 4px;
+}
+
+h2 {
+    font-size: 40px;
+    color: #EB3A13;
+    margin-bottom: 30px;
+}
+
+.info {
+    padding: 114px 15px 164px;
+    color: #F0F0F0;
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    align-items: flex-start;
+}
+
+.gallery__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.about {
+    padding: 180px 15px 120px;
+    color: #F0F0F0;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.about p {
+    margin-bottom: 152px;
+}
+
+.footer {
+    background: #1F1F1F;
+    padding: 30px 0 62px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+input {
+    color: #F0F0F0;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+input::placeholder {
+    color: #F0F0F0;
+}
+
+.footer button {
+    padding: 9px;
+    background: linear-gradient(93.34deg, #FFA600 0%, #E41818 100%);
+    color: #F0F0F0;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__content nav {
+    display: flex;
+    gap: 51px;
+    color: #F0F0F0;
+}
+
+.footer__content a {
+    color: #F0F0F0;
+    display: block;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.burger{
+    color: #F0F0F0;
+    font-size: 40px;
+    font-weight: 900;
+    display: none;
+}
+
+@media(max-width: 1140px) {
+    img {
+        width: 100%;
+    }
+
+    .info {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 100px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 13px 51px;
+    }
+
+    .banner {
+        height: 50vh;
+    }
+
+    .header__nav img {
+        width: 70%;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    form {
+        width: 75%;
+    }
+
+    .footer__content nav {
+        justify-content: space-around;
+        width: 90%;
+    }
+
+    .footer__content a {
+        margin-top: 10px;
+        padding: 10px 10px 10px 0;
+    }
+
+    .info, .about {
+        padding: 44px 15px;
+    }
+
+    .about p{
+        margin-bottom: 44px;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .header__nav-list{
+        position: fixed;
+        flex-direction: column;
+        background: #1414147f;
+        backdrop-filter: blur(15px);
+        inset: 0;
+        justify-content: center;
+        align-items: center;
+        transition: .4s ease-in-out;
+        transform: translateX(100%);
+    }
+    .burger:hover ~ .header__nav-list{
+        transform: translateX(0);
+    }
+}
